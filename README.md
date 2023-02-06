@@ -82,4 +82,7 @@ docker-compose exec php bin/console doctrine:fixtures:load
 ```shell
 # make own database dump
 docker-compose exec db bash pg_dump -U rts_user -d rts_db > .docker/dump/rts_db.dump 
+
+# add cronjob to user (crontab -l)
+crontab cron-schedule.txt
 ```
